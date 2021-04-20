@@ -1,4 +1,4 @@
-import express, { response } from "express"
+import express from "express"
 
 const app = express();
 
@@ -22,3 +22,5 @@ app.post("/", (request, response) => {
 });
 
 app.listen(3333, () => console.log("Server is running on port 3333"));
+
+
