@@ -30,7 +30,7 @@ class ConnectionsService {
         return connection;
     }
 
-    async finfByUserId(user_id: string){
+    async findByUserId(user_id: string){
         const connection = await this.connectionsRepository.findOne({
             user_id,
         });

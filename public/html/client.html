@@ -105,7 +105,7 @@
        fetch("http://localhost:3333/settings/admin").then((result) =>
          result.json().then((response) => {
           const buttonSupport = document.getElementById("btn_support");
-         if (!response.chat) {
+         if (!response.settings.chat === true) {
              buttonSupport.style.display = "none";
            }
          })

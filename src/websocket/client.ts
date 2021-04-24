@@ -34,7 +34,7 @@ io.on("connect", (socket) => {
         }else {
             user_id = userExists.id;
 
-            const connection = await connectionsService.finfByUserId(userExists.id);
+            const connection = await connectionsService.findByUserId(userExists.id);
 
             if(!connection){
                 await connectionsService.create({
