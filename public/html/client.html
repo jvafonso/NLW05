@@ -22,11 +22,9 @@
       </div>
 
       <div class="text_support">
-        <script id="email-template" type="text/template">
+        <script id="message-user-template" type="text/template">
           <div class="client">
             <span class="name">{{email}}</span>
-        </script>
-        <script id="message-user-template" type="text/template">
             <span class="client message">
               {{message}}
               <!-- <label class="date">{{date}}</label> -->
@@ -102,14 +100,14 @@
     const chat = document.getElementById("chat_help");
 
     function onLoad() {
-       fetch("http://localhost:3333/settings/admin").then((result) =>
-         result.json().then((response) => {
+      fetch("http://localhost:3333/settings/admin").then((result) =>
+        result.json().then((response) => {
           const buttonSupport = document.getElementById("btn_support");
-         if (!response.settings.chat === true) {
-             buttonSupport.style.display = "none";
-           }
-         })
-       );
+          if (!response.settings.chat === true) {
+            buttonSupport.style.display = "none";
+          }
+        })
+      );
     }
 
     function openChat() {
